@@ -4,6 +4,11 @@ import com.iris.domain.StockRecord;
 import org.apache.commons.lang.StringUtils;
 
 public class RecordParse {
+    /**
+     * string信息转化为StockRecord数据类型
+     * @param responseString
+     * @return
+     */
     public static StockRecord parseRecordFromResponseString(String responseString) {
         if (StringUtils.isEmpty(responseString)) {
             return null;
