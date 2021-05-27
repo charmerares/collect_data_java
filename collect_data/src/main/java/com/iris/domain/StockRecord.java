@@ -4,18 +4,20 @@ import lombok.Data;
 
 @Data
 public class StockRecord {
-    public double last_day_final_point;
-    public double today_start_point;
-    public String date;
-    public String timeNow;
+
+    private String recordId;
+    private double lastDayFinalPoint;
+    private double todayStartPoint;
+    private String date;
+    private String timeNow;
 
     @Override
     public String toString() {
         return "StockRecord{" +
-                "last_day_final_point=" + last_day_final_point +
-                ", today_start_point=" + today_start_point +
+                "recordId='" + recordId + '\'' +
+                ", lastDayFinalPoint=" + lastDayFinalPoint +
+                ", todayStartPoint=" + todayStartPoint +
                 ", date='" + date + '\'' +
-                ", timeNow='" + timeNow + '\'' +
                 '}';
     }
 }
