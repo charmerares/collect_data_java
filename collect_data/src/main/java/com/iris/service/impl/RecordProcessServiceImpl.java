@@ -13,6 +13,6 @@ public class RecordProcessServiceImpl implements RecordProcessService {
     private RecordRequest recordRequest;
     public StockRecord getRecordByStockNumber(String recordNumber) {
         String recordString = recordRequest.getRecordByStockNumber(recordNumber);
-        return RecordParse.parseRecordFromResponseString(recordString);
+        return RecordParse.parseRecordFromResponseString(recordString,recordNumber);
     }
 }

@@ -9,4 +9,5 @@ public interface RecordProcessService {
      * @return
      */
     StockRecord getRecordByStockNumber(String recordNumber);
+
 }
