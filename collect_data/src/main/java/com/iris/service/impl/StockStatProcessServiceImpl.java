@@ -19,7 +19,6 @@ public class StockStatProcessServiceImpl implements StockStatProcessService {
     @Autowired
     private RecordSaveService recordSaveService;
 
-    @Override
     public List<String> startCollectData() {
         List<String> resultStrings = new ArrayList<>();
         int temp_index = REQUEST_START_INDEX_NUMBER;

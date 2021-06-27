@@ -1,8 +1,5 @@
 package com.iris;
 
-import com.iris.domain.StockRecord;
-import com.iris.request.RecordRequest;
-import com.iris.service.RecordProcessService;
 import com.iris.service.StockStatProcessService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

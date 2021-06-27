@@ -13,7 +13,7 @@ public class RecordSaveServiceImpl implements RecordSaveService {
     public boolean saveRecordStringToPath(String recordString, String filepath) {
         BufferedWriter out = null;
         try {
-            out = new BufferedWriter(new FileWriter(filepath));
+            out = new BufferedWriter(new FileWriter(filepath,true));
             out.append(recordString);
             out.close();
         } catch (IOException e) {
