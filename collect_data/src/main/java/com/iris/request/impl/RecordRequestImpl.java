@@ -15,9 +15,9 @@ import java.io.IOException;
 
 @Component
 public class RecordRequestImpl implements RecordRequest {
-    public String getRecordByStockNumber(String stockNumber) {
+    public String getRecordByStockNumber(String stockNumber,String stockIdPrefix) {
         CloseableHttpClient client = HttpClientBuilder.create().build();
-        String requestUrl=RequestBuild.buildRecordRequestUrl(String.valueOf(stockNumber));
+        String requestUrl=RequestBuild.buildRecordRequestUrl(String.valueOf(stockNumber),stockIdPrefix);
         HttpGet getRequest = new HttpGet(requestUrl);
         CloseableHttpResponse response = null;
 

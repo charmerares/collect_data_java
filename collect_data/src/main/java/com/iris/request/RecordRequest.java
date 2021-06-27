@@ -6,5 +6,5 @@ public interface RecordRequest {
       * @param stockNumber
       * @return
       */
-    String getRecordByStockNumber(String stockNumber);
+    String getRecordByStockNumber(String stockNumber,String stockIdPrefix);
 }

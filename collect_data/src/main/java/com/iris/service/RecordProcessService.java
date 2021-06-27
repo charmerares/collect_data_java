@@ -8,6 +8,6 @@ public interface RecordProcessService {
      * @param recordNumber
      * @return
      */
-    StockRecord getRecordByStockNumber(String recordNumber);
+    StockRecord getRecordByStockNumber(String recordNumber,String stockPrefix);
 
 }

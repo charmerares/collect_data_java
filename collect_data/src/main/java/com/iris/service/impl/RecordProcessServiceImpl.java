@@ -11,8 +11,8 @@ import com.iris.util.RecordParse;
 public class RecordProcessServiceImpl implements RecordProcessService {
     @Autowired
     private RecordRequest recordRequest;
-    public StockRecord getRecordByStockNumber(String recordNumber) {
-        String recordString = recordRequest.getRecordByStockNumber(recordNumber);
+    public StockRecord getRecordByStockNumber(String recordNumber,String stockPrefix) {
+        String recordString = recordRequest.getRecordByStockNumber(recordNumber,stockPrefix);
         return RecordParse.parseRecordFromResponseString(recordString,recordNumber);
     }
 }
