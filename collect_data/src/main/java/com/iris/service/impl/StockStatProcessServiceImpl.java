@@ -46,15 +46,15 @@ public class StockStatProcessServiceImpl implements StockStatProcessService {
         while (temp_index < stockEndIndex) {
             String temp_string = recordRequest.getRecordByStockNumber(RequestBuild.buildStockIdByIntNumber(temp_index),
                     stockPrefix);
-            if (temp_string.length() > NULL_RESULT_STRING_LENGTH) {
-                resultStrings.add(temp_string);
-                System.out.println(temp_string);
-                recordSaveService.saveRecordStringToPath(temp_string, RECORD_SAVE_FILEPATH);
-                try {
-                    Thread.sleep(200);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+            try {
+                if (temp_string.length() > NULL_RESULT_STRING_LENGTH) {
+                    resultStrings.add(temp_string);
+                    System.out.println(temp_string);
+                    recordSaveService.saveRecordStringToPath(temp_string, RECORD_SAVE_FILEPATH);
                 }
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
             temp_index++;
         }
