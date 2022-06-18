@@ -1,5 +1,6 @@
 package com.iris.request.impl;
 
+import com.iris.constant.CollectModuleConstant;
 import org.apache.http.HttpEntity;
 import org.apache.http.StatusLine;
 import org.apache.http.client.methods.CloseableHttpResponse;
@@ -19,6 +20,8 @@ public class RecordRequestImpl implements RecordRequest {
         CloseableHttpClient client = HttpClientBuilder.create().build();
         String requestUrl=RequestBuild.buildRecordRequestUrl(String.valueOf(stockNumber),stockIdPrefix);
         HttpGet getRequest = new HttpGet(requestUrl);
+        getRequest.setHeader(CollectModuleConstant.HTTP_HEADER_REFER,
+                CollectModuleConstant.HTTP_REFER_VALUE);
         CloseableHttpResponse response = null;
 
         // start execute com.iris.request
